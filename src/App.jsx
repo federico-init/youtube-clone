@@ -8,7 +8,6 @@ const Container = styled.div`
 
 const Main = styled.div`
   flex: 7;
-  border: 1px solid red;
 `;
 const Wrapper = styled.div``;
 
