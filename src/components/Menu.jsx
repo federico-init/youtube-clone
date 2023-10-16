@@ -19,6 +19,8 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
+import { Link } from "react-router-dom";
+
 const MenuContainer = styled.div`
   flex: 1;
   background-color: ${({ theme }) => theme.bgLighter};
@@ -78,10 +80,12 @@ const Menu = ({ setDarkMode }) => {
   return (
     <MenuContainer>
       <MenuWrapper>
-        <Logo>
-          <Img src={Icon} />
-          MyTube
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={Icon} />
+            MyTube
+          </Logo>
+        </Link>
         <Item>
           <HomeIcon />
           Home

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import ChannelLogo from "../assets/channel.jpg";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
   width: 360px;
@@ -50,17 +51,22 @@ const Info = styled.div`
 
 const Card = () => {
   return (
-    <CardContainer>
-      <Image src="https://i.ytimg.com/vi/JTckTjJAE6s/maxresdefault.jpg" />
-      <Details>
-        <ChannelImage src={ChannelLogo} />
-        <Texts>
-          <Title>Test Video</Title>
-          <ChannelName>Federico Loves Coding</ChannelName>
-          <Info>123,321 views • 3 days ago</Info>
-        </Texts>
-      </Details>
-    </CardContainer>
+    <Link to="/video/test" style={{ textDecoration: "none" }}>
+      <CardContainer>
+        <Image src="https://i.ytimg.com/vi/JTckTjJAE6s/maxresdefault.jpg" />
+        <Details>
+          <ChannelImage src={ChannelLogo} />
+          <Texts>
+            <Title>Test Video</Title>
+            <ChannelName>Federico Loves Coding</ChannelName>
+            <Info>
+              {Math.floor(Math.random() * 1000) + 2} views •{" "}
+              {Math.floor(Math.random() * 6) + 1} days ago
+            </Info>
+          </Texts>
+        </Details>
+      </CardContainer>
+    </Link>
   );
 };
 
