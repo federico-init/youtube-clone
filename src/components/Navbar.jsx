@@ -1,14 +1,45 @@
 import styled from "styled-components";
 
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
-const NavbarContainer = styled.div``;
+const NavbarContainer = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: ${({ theme }) => theme.bgLighter};
+  height: 56px;
+`;
 
-const NavbarWrapper = styled.div``;
+const NavbarWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+`;
 
-const Search = styled.div``;
+const Search = styled.div`
+  position: absolute;
+  width: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+`;
 
-const Input = styled.div``;
+const Input = styled.input`
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 90%;
+`;
 
 const Button = styled.button`
   padding: 5px 15px;
@@ -17,7 +48,6 @@ const Button = styled.button`
   color: #3ea6ff;
   border-radius: 3px;
   font-weight: 500;
-  margin-top: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -30,6 +60,7 @@ const Navbar = () => {
       <NavbarWrapper>
         <Search>
           <Input placeholder="Search" />
+          <SearchOutlinedIcon />
         </Search>
         <Button>
           <AccountCircleOutlinedIcon />
