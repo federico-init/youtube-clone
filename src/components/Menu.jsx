@@ -21,9 +21,9 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 
 const MenuContainer = styled.div`
   flex: 1;
-  background-color: #202020;
+  background-color: ${({ theme }) => theme.bg};
   height: 100vh;
-  color: #fff;
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
   top: 0;
@@ -55,7 +55,7 @@ const Item = styled.div`
 
 const Hr = styled.hr`
   margin: 15px 0;
-  border: 0.5px solid #373737;
+  border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 
 const Login = styled.div``;
@@ -74,7 +74,7 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-const Menu = () => {
+const Menu = ({ setDarkMode }) => {
   return (
     <MenuContainer>
       <MenuWrapper>
@@ -104,7 +104,7 @@ const Menu = () => {
           History
         </Item>
         <Hr />
-        <Login>Sign in to like videos, comment, and subscribe.</Login>
+        <Login>Sign in to like videos, comment and subscribe.</Login>
         <Button>
           <AccountCircleOutlinedIcon />
           SIGN IN
@@ -147,7 +147,8 @@ const Menu = () => {
           <HelpOutlineOutlinedIcon />
           Help
         </Item>
-        <Item>
+        {/* <Item onClick={() => setDarkMode(!darkMode)}> */}
+        <Item onClick={() => setDarkMode((prev) => !prev)}>
           <SettingsBrightnessOutlinedIcon />
           Light Mode
         </Item>
