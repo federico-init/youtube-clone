@@ -19,7 +19,9 @@ const Main = styled.div`
   flex: 7;
   background-color: ${({ theme }) => theme.bg};
 `;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding: 22px 96px;
+`;
 
 function App() {
   // definisco uno state per il tema da applicare
