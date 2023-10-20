@@ -3,8 +3,9 @@ import Card from "../components/Card";
 
 const HomeContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 
 const Home = () => {

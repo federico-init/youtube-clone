@@ -34,6 +34,7 @@ const Search = styled.div`
 `;
 
 const Input = styled.input`
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
   border: none;
   background-color: transparent;

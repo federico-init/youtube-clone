@@ -4,14 +4,15 @@ import ChannelLogo from "../assets/channel.jpg";
 import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
-  width: 360px;
+  width: 370px;
   margin-bottom: 45px;
   cursor: pointer;
+  flex: 1;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 202px;
+  height: 208px;
   object-fit: cover;
   border-radius: 8px;
 `;

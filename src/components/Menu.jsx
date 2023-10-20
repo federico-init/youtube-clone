@@ -76,7 +76,7 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-const Menu = ({ setDarkMode }) => {
+const Menu = ({ darkMode, setDarkMode }) => {
   return (
     <MenuContainer>
       <MenuWrapper>
@@ -154,7 +154,7 @@ const Menu = ({ setDarkMode }) => {
         {/* <Item onClick={() => setDarkMode(!darkMode)}> */}
         <Item onClick={() => setDarkMode((prev) => !prev)}>
           <SettingsBrightnessOutlinedIcon />
-          Light Mode
+          {darkMode ? "Light" : "Dark"} Mode
         </Item>
       </MenuWrapper>
     </MenuContainer>
