@@ -6,6 +6,7 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
+import Comments from "../components/Comments";
 
 const VideoContainer = styled.div`
   display: flex;
@@ -123,7 +124,7 @@ const Video = () => {
             allowFullScreen
           ></iframe>
         </VideoWrapper>
-        <Title>Lorem ipsum dolor sit amet.</Title>
+        <Title>Test Video</Title>
         <Details>
           <Info>1,234,567 views • Oct 11, 2023</Info>
           <Buttons>
@@ -158,6 +159,8 @@ const Video = () => {
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </VideoContainer>
