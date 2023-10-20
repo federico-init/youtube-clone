@@ -4,23 +4,27 @@ import ChannelLogo from "../assets/channel.jpg";
 import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
-  width: 370px;
-  margin-bottom: 45px;
+  display: ${(props) => props.type === "sm" && "flex"};
+  width: ${(props) => props.type === "sm" && "370px"};
+  margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
   flex: 1;
+  gap: 10px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 208px;
+  height: ${(props) => (props.type === "sm" ? "120px" : "208px")};
   object-fit: cover;
   border-radius: 8px;
+  flex: 1;
 `;
 
 const Details = styled.div`
   display: flex;
-  margin-top: 16px;
+  margin-top: ${(props) => props.type !== "sm" && "16px"};
   gap: 12px;
+  flex: 1;
 `;
 
 const ChannelImage = styled.img`
@@ -28,6 +32,7 @@ const ChannelImage = styled.img`
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
+  display: ${(props) => props.type === "sm" && "none"};
 `;
 
 const Texts = styled.div``;
@@ -50,13 +55,16 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-const Card = () => {
+const Card = ({ type }) => {
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
-      <CardContainer>
-        <Image src="https://i.ytimg.com/vi/JTckTjJAE6s/maxresdefault.jpg" />
-        <Details>
-          <ChannelImage src={ChannelLogo} />
+      <CardContainer type={type}>
+        <Image
+          src="https://i.ytimg.com/vi/JTckTjJAE6s/maxresdefault.jpg"
+          type={type}
+        />
+        <Details type={type}>
+          <ChannelImage src={ChannelLogo} type={type} />
           <Texts>
             <Title>Test Video</Title>
             <ChannelName>Federico Loves Coding</ChannelName>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import ChannelLogo from "../assets/channel.jpg";
 
-import Card from "../components/Comments";
+import Card from "../components/Card";
 import Comments from "../components/Comments";
 
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
@@ -12,6 +12,7 @@ import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
 
 const VideoContainer = styled.div`
   display: flex;
+  gap: 24px;
 `;
 
 const Content = styled.div`
@@ -165,7 +166,14 @@ const Video = () => {
         <Comments />
       </Content>
       <Recommendation>
-        <Card />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
       </Recommendation>
     </VideoContainer>
   );
