@@ -55,13 +55,13 @@ const Button = styled.button`
   gap: 5px;
 `;
 
-const Navbar = () => {
+const Navbar = ({ darkMode }) => {
   return (
     <NavbarContainer>
       <NavbarWrapper>
         <Search>
           <Input placeholder="Search" />
-          <SearchOutlinedIcon />
+          <SearchOutlinedIcon style={{ color: darkMode ? "white" : "black" }} />
         </Search>
         <Button>
           <AccountCircleOutlinedIcon />

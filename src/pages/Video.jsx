@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 import ChannelLogo from "../assets/channel.jpg";
 
+import Card from "../components/Comments";
+import Comments from "../components/Comments";
+
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
-import Comments from "../components/Comments";
 
 const VideoContainer = styled.div`
   display: flex;
@@ -162,7 +164,9 @@ const Video = () => {
         <Hr />
         <Comments />
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation>
+        <Card />
+      </Recommendation>
     </VideoContainer>
   );
 };
